@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fira_Sans, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/global/navbar";
+import { Loader2 } from "lucide-react";
+import { Suspense } from "react";
+import Footer from "../components/global/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const firaSans = Fira_Sans({
+  variable: "--font-fira-sans",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -23,11 +29,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${firaSans.variable} ${poppins.variable} antialiased min-h-screen `}
       >
-        {children}
+        <Suspense
+          fallback={
+            <div className="min-h-[calc(100vh-64px)] w-full flex flex-col items-center justify-center">
+              <Loader2 className="animate-spin" />
+            </div>
+          }
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

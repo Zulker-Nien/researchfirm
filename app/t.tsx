@@ -5,13 +5,13 @@ import Services from "../components/landing/services";
 import { Button } from "../components/ui/button";
 import Carousel from "@/components/landing/carousel";
 import Contact from "@/components/landing/Contact/contact";
-import { ArrowRight, Lightbulb } from "lucide-react";
+import { ArrowRight, Play, BookOpen, Users, Lightbulb } from "lucide-react"; // Assuming Lucide icons for better visuals
 
 export default function Home() {
-  return (
-    <div className="min-h-screen flex flex-col w-full">
-      {/* 1. Hero */}
-      <section className="py-20 md:py-40 px-4 xl:px-64 flex flex-col gap-6 md:items-center justify-center text-center relative overflow-hidden">
+    return (
+        <div className="min-h-screen flex flex-col w-full bg-linear-to-br from-white via-slate-50 to-slate-100">
+            {/* 1. Hero */}
+            <section className="py-20 md:py-40 px-4 xl:px-64 flex flex-col gap-6 md:items-center justify-center text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-linear-to-r from-blue-50/50 via-transparent to-indigo-50/50"></div>
                 <div className="relative z-10 max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
@@ -33,18 +33,23 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-      {/* 2. Service Section */}
-      <div className="w-full bg-slate-200 py-16">
-        <div className="px-4 xl:px-64 w-full">
-          <Services />
-        </div>
-      </div>
-      {/* 3. Carousel */}
-      <div className="bg-transparent">
-        <Carousel />
-      </div>
-      {/* 4. GSi programs */}
-      <section className="py-20 md:py-40 px-4 xl:px-64 flex flex-col gap-6 md:items-center justify-center text-center relative overflow-hidden">
+
+            {/* 2. Services Section */}
+            <section className="w-full bg-white py-20 border-t border-gray-200">
+                <div className="px-4 xl:px-64 w-full">
+                    <Services />
+                </div>
+            </section>
+
+            {/* 3. Carousel */}
+            <section className="bg-linear-to-r from-slate-100 to-gray-100 py-20">
+                <div className="px-4 xl:px-64">
+                    <Carousel />
+                </div>
+            </section>
+
+            {/* 4. GSI Programs */}
+            <section className="py-20 md:py-40 px-4 xl:px-64 flex flex-col gap-6 md:items-center justify-center text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-linear-to-l from-indigo-50/50 via-transparent to-purple-50/50"></div>
                 <div className="relative z-10 max-w-4xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-6">
@@ -67,14 +72,29 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-      {/* 4. Watch Listen and read */}
-      <div>
-        <Blog />
-      </div>
-      {/* 5. Contact */}
-      <div>
-        <Contact />
-      </div>
-    </div>
-  );
+
+            {/* 5. Watch, Listen, and Read */}
+            <section className="py-20 bg-white">
+                <div className="px-4 xl:px-64">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
+                            <BookOpen className="h-4 w-4" />
+                            Insights & Inspiration
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+                            Watch, Listen, and Read
+                        </h2>
+                    </div>
+                    <Blog />
+                </div>
+            </section>
+
+            {/* 6. Contact */}
+            <section className="py-20 bg-linear-to-b from-gray-50 to-slate-100">
+                <div className="px-4 xl:px-64">
+                    <Contact />
+                </div>
+            </section>
+        </div>
+    );
 }
