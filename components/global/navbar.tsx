@@ -6,6 +6,7 @@ import { useState } from "react"
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "../ui/navigation-menu"
 import Link from "next/link"
 import Image from "next/image"
+import { ModeToggle } from "./themeToggle"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -54,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 export default function Navbar() {
     const [openMobile, setOpenMobile] = useState(false)
     return (
-        <div className="flex items-center justify-between py-4 px-4 xl:px-64 border-b relative">
+        <div className="fixed flex items-center justify-between py-4 px-4 xl:px-64 border-b w-full z-50 dark:bg-slate-800">
             <Button variant={"outline"} className="md:hidden relative" onClick={() => setOpenMobile(!openMobile)}>
                 <span className={`absolute transition-all duration-300 ease-in-out ${openMobile ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}>
                     <Menu />
@@ -134,7 +135,9 @@ export default function Navbar() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                 </NavigationMenuList>
+                <ModeToggle />
             </NavigationMenu>
+
         </div>
     )
 }

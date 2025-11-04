@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Fira_Sans, Geist_Mono, Poppins } from "next/font/google";
+import { Fira_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/global/navbar";
 import { Loader2 } from "lucide-react";
 import { Suspense } from "react";
 import Footer from "../components/global/footer";
+import { ThemeProvider } from "next-themes";
 
 const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
@@ -29,21 +30,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${firaSans.variable} ${poppins.variable} antialiased min-h-screen `}
       >
-        <Suspense
-          fallback={
-            <div className="min-h-[calc(100vh-64px)] w-full flex flex-col items-center justify-center">
-              <Loader2 className="animate-spin" />
-            </div>
-          }
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
-        </Suspense>
+          <Suspense
+            fallback={
+              <div className="min-h-[calc(100vh-64px)] w-full flex flex-col items-center justify-center">
+                <Loader2 className="animate-spin" />
+              </div>
+            }
+          >
+
+            <Navbar />
+            {children}
+            <Footer />
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );

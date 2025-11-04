@@ -38,20 +38,21 @@ export default function Contact() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:w-1/2">
                 <div className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-slate-700">Email</label>
+                        <label className="block text-sm font-medium">Email</label>
                         <Input
                             {...register('email')}
                             placeholder="Enter your email"
                             disabled={isSubmitting}
+                            className="mt-2"
                         />
                         {errors.email && (
                             <p className="text-sm text-destructive mt-1">{errors.email.message}</p>
                         )}
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-slate-700">Last Name</label>
+                        <label className="block text-sm font-medium">Last Name</label>
                         <Textarea
-                            className="h-48"
+                            className="h-48 mt-2"
                             rows={8}
                             {...register('message')}
                             placeholder="Type your message..."
@@ -69,7 +70,7 @@ export default function Contact() {
                                 disabled={isSubmitting}
                             />
                         </div>
-                        <label className="text-sm font-medium text-slate-700">I accept the terms.</label>
+                        <label className="text-sm font-medium">I accept the terms.</label>
                         {errors.message && (
                             <p className="text-sm text-destructive">{errors.message.message}</p>
                         )}
