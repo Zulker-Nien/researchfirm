@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function Footer() {
     return (
-        <div className="grid grid-cols-1 py-4 px-4 xl:px-64">
+        <div className="grid grid-cols-1 py-4 px-4 xl:px-64 bg-accent">
             {/* Top Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center">
                 <div className="col-span-2">
@@ -34,7 +34,7 @@ export default function Footer() {
                 <hr />
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     <div>&copy; 2025. All rights reserved</div>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col md:flex-row gap-4">
                         <Button variant={"ghost"}>Privacy Policy</Button>
                         <Button variant={"ghost"}>Terms & Services</Button>
                         <Button variant={"ghost"}>Cookie Settings</Button>

@@ -1,20 +1,20 @@
-interface SVGProps {
-  animated?: boolean;
-}
+// interface SVGProps {
+//   animated?: boolean;
+// }
 
-const SVGComponent = ({ animated = false }: SVGProps) => (
+const SVGComponent = () => (
   <svg
-    className={animated ? "animated" : ""}
+    className="animated"
     id="freepik_stories-sentiment-analysis"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 750 500"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <style>
+    {/* <style>
       {
         "svg#freepik_stories-sentiment-analysis:not(.animated) .animable {opacity: 0;}svg#freepik_stories-sentiment-analysis.animated #freepik--Table--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--device-3--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--device-2--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--device-1--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--charts-3--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--charts-2--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--charts-1--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-sentiment-analysis.animated #freepik--Character--inject-47 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}            @keyframes slideUp {                0% {                    opacity: 0;                    transform: translateY(30px);                }                100% {                    opacity: 1;                    transform: inherit;                }            }                    @keyframes slideDown {                0% {                    opacity: 0;                    transform: translateY(-30px);                }                100% {                    opacity: 1;                    transform: translateY(0);                }            }                    @keyframes fadeIn {                0% {                    opacity: 0;                }                100% {                    opacity: 1;                }            }        .animator-hidden { display: none; }"
       }
-    </style>
+    </style> */}
     <g
       id="freepik--background-simple--inject-47"
       className="animable animator-hidden"

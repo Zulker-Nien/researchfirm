@@ -80,7 +80,7 @@ export default function Services() {
                     return (
                         <div
                             key={key}
-                            className={`bg-card/80 backdrop-blur-sm rounded-xl shadow-md border ${borderClass} p-6 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center hover:scale-105 space-y-4`}
+                            className={`p-8 rounded-2xl border bg-accent backdrop-blur-sm hover:border-tertiary transition-all duration-300`}
                             onMouseEnter={handleHover(key)}
                         >
                             <div className="w-full min-h-64 border-b flex items-center">

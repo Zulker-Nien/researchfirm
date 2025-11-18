@@ -4,17 +4,17 @@ interface SVGProps {
 
 const SVGComponent2 = ({ animated = false }: SVGProps) => (
   <svg
-    className={animated ? "animated" : ""}
+    className="animated"
     id="freepik_stories-research-paper"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 500 500"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <style>
+    {/* <style>
       {
         "svg#freepik_stories-research-paper:not(.animated) .animable {opacity: 0;}svg#freepik_stories-research-paper.animated #freepik--Notes--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideLeft;animation-delay: 0s;}svg#freepik_stories-research-paper.animated #freepik--Folder--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;}svg#freepik_stories-research-paper.animated #freepik--Notebook--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-research-paper.animated #freepik--Books--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideLeft;animation-delay: 0s;}svg#freepik_stories-research-paper.animated #freepik--Character--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}            @keyframes slideLeft {                0% {                    opacity: 0;                    transform: translateX(-30px);                }                100% {                    opacity: 1;                    transform: translateX(0);                }            }                    @keyframes slideRight {                0% {                    opacity: 0;                    transform: translateX(30px);                }                100% {                    opacity: 1;                    transform: translateX(0);                }            }                    @keyframes slideDown {                0% {                    opacity: 0;                    transform: translateY(-30px);                }                100% {                    opacity: 1;                    transform: translateY(0);                }            }                    @keyframes fadeIn {                0% {                    opacity: 0;                }                100% {                    opacity: 1;                }            }        .animator-hidden { display: none; }"
       }
-    </style>
+    </style> */}
     <g
       id="freepik--background-simple--inject-2"
       className="animable animator-hidden"

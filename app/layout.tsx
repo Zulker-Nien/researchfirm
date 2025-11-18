@@ -6,6 +6,8 @@ import { Loader2 } from "lucide-react";
 import { Suspense } from "react";
 import Footer from "../components/global/footer";
 import { ThemeProvider } from "next-themes";
+import Background from "@/components/global/background";
+
 
 const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
@@ -48,8 +50,12 @@ export default function RootLayout({
             }
           >
 
+
             <Navbar />
-            {children}
+            <div className="relative">
+              <Background />
+              {children}
+            </div>
             <Footer />
           </Suspense>
         </ThemeProvider>

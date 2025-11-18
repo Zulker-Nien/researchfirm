@@ -4,17 +4,17 @@ interface SVGProps {
 
 const SVGComponent3 = ({ animated = false }: SVGProps) => (
   <svg
-    className={animated ? "animated" : ""}
+    className="animated"
     id="freepik_stories-on-the-office"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 500 500"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <style>
+    {/* <style>
       {
         "svg#freepik_stories-on-the-office:not(.animated) .animable {opacity: 0;}svg#freepik_stories-on-the-office.animated #freepik--background-complete--inject-91 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn;animation-delay: 0s;}svg#freepik_stories-on-the-office.animated #freepik--Board--inject-91 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-on-the-office.animated #freepik--character-2--inject-91 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}svg#freepik_stories-on-the-office.animated #freepik--Desk--inject-91 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0s;}svg#freepik_stories-on-the-office.animated #freepik--character-1--inject-91 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}            @keyframes zoomIn {                0% {                    opacity: 0;                    transform: scale(0.5);                }                100% {                    opacity: 1;                    transform: scale(1);                }            }                    @keyframes slideDown {                0% {                    opacity: 0;                    transform: translateY(-30px);                }                100% {                    opacity: 1;                    transform: translateY(0);                }            }                    @keyframes fadeIn {                0% {                    opacity: 0;                }                100% {                    opacity: 1;                }            }                    @keyframes slideUp {                0% {                    opacity: 0;                    transform: translateY(30px);                }                100% {                    opacity: 1;                    transform: inherit;                }            }        .animator-hidden { display: none; }"
       }
-    </style>
+    </style> */}
     <g
       id="freepik--background-complete--inject-91"
       className="animable animator-active animator-hidden"

@@ -25,6 +25,7 @@
 --color-destructive: var(--destructive);
 --color-accent-foreground: var(--accent-foreground);
 --color-accent: var(--accent);
+--color-tertiary: var(--tertiary);
 --color-muted-foreground: var(--muted-foreground);
 --color-muted: var(--muted);
 --color-secondary-foreground: var(--secondary-foreground);
@@ -39,6 +40,17 @@
 --radius-md: calc(var(--radius) - 2px);
 --radius-lg: var(--radius);
 --radius-xl: calc(var(--radius) + 4px);
+--animate-fade-in: fadeIn 0.5s ease-in-out;
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(-16px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
 }
 :root {
   --radius: 0.65rem;
@@ -57,6 +69,7 @@
   --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
+  --tertiary:  oklch(66.006% 0.20064 40.015);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.702 0.183 293.541);
@@ -88,7 +101,7 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
+  --accent: oklch(12.9% 0.042 264.695);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
