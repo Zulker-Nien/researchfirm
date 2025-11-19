@@ -13,7 +13,7 @@ export default function TrainingCourses() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-950 via-indigo-900 to-purple-900 text-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center px-4 xl:px-64">
           <Badge className="mb-6 bg-indigo-600/30 text-white border-indigo-400">Training Academy</Badge>
@@ -139,7 +139,7 @@ export default function TrainingCourses() {
             </CardFooter>
           </Card>
 
-          <Card className="bg-gradient-to-br from-indigo-700 to-purple-800 border-indigo-600 shadow-2xl scale-105">
+          <Card className="bg-linear-to-br from-indigo-700 to-purple-800 border-indigo-600 shadow-2xl scale-105">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <Badge className="bg-yellow-500 text-black px-4 py-1 text-lg">MOST POPULAR</Badge>
             </div>
@@ -186,7 +186,7 @@ export default function TrainingCourses() {
       </section>
 
       {/* Enrollment Form */}
-      <section className="py-20 px-4 xl:px-64 bg-muted/30">
+      <section className="py-20 px-4 xl:px-64 bg-linear-to-b from-transparent to-accent">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Enroll or Request Information</h2>
           <Card>

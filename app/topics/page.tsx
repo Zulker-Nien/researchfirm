@@ -120,8 +120,8 @@ export default function Topics() {
     return (
         <>
             {/* Flagship Projects – Prominent Grid */}
-            <section className="py-20 lg:py-32 px-4 xl:px-64 animate-fade-in">
-                <div className="text-center mb-16">
+            <section className="py-20 lg:py-32 px-4 xl:px-64 animate-fade-in ">
+                <div className="text-center mb-16 ">
                     <div className="inline-flex items-center gap-3 px-6 py-3 bg-accent backdrop-blur-sm border border-secondary rounded-full text-sm font-medium mb-8">
                         <Sparkles className="h-5 w-5 text-tertiary" />
                         <span className="text-primary">Launched Projects</span>

@@ -6,16 +6,16 @@ import { Card } from "@/components/ui/card"
 
 export default function OurRoots() {
     return (
-        <div className="min-h-screen animate-fade-in">
+        <div className="min-h-screen animate-fade-in flex flex-col gap-8">
 
             {/* Hero */}
-            <section className="pt-20 lg:pt-32 px-4 xl:px-64">
+            <section className="pt-20 lg:pt-32 px-4 xl:px-64 ">
                 <div className="relative z-10 mx-auto px-4 w-full text-center">
                     <div className="inline-flex items-center gap-3 px-6 py-3 bg-accent backdrop-blur-sm border border-secondary rounded-full text-sm font-medium mb-8">
                         <Sparkles className="h-5 w-5 text-tertiary" />
                         <span className="text-primary">Launched 10 May 2025</span>
                     </div>
-                    <div className="text-center mb-16">
+                    <div className="text-center">
                         <h2 className="text-4xl md:text-6xl font-bold">Our Roots</h2>
                         <p className="text-xl text-muted-foreground">
                             GSI is a for-profit think tank launched as a startup that goes to the very roots of the problems facing Bangladesh and the world. We shift scholarly and academic content from dusty journals to the pulse of social media — delivering pragmatic, actionable insights on governance, security, technology, AI, conflict, and development.

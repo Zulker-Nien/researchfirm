@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       {/* 4. Training Programs CTA */}
-      <section className="py-20 md:py-40 px-4 xl:px-64 bg-indigo-900/5">
+      <section className="py-20 md:py-40 px-4 xl:px-64 bg-linear-to-b from-transparent via-accent to-transparent">
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-300 rounded-full text-sm font-medium mb-6">
             <Lightbulb className="h-4 w-4" />
