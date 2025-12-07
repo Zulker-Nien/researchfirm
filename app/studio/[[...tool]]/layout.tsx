@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
     return (
         <div
-            className={` antialiased min-h-screen `}
+            className={` antialiased`}
         >
             <Suspense
                 fallback={

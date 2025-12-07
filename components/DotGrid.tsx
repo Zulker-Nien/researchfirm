@@ -279,7 +279,7 @@ const DotGrid: React.FC<DotGridProps> = ({
   }, [maxSpeed, speedTrigger, proximity, resistance, returnDuration, shockRadius, shockStrength]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-10 dark:bg-accent">
+    <div className="fixed top-0 left-0 w-full h-full -z-10 bg-blue-50 dark:bg-accent">
       <section className={`p-4 flex items-center justify-center h-full w-full relative ${className}`} style={style}>
         <div ref={wrapperRef} className="w-full h-full relative">
           <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />

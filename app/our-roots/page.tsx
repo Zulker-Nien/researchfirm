@@ -3,13 +3,14 @@
 import { Globe, Shield, BrainCircuit, Radio, BookOpenText, GraduationCap, Lightbulb, CalendarDays, ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { SevenWings } from "./SevenWings"
 
 export default function OurRoots() {
     return (
-        <div className="min-h-screen animate-fade-in flex flex-col gap-8">
+        <div className="animate-fade-in flex flex-col gap-8">
 
             {/* Hero */}
-            <section className="pt-20 lg:pt-32 px-4 xl:px-64 ">
+            <section className="py-20 lg:py-32 px-4 xl:px-64 animate-fade-in min-h-screen flex items-center justify-center">
                 <div className="relative z-10 mx-auto px-4 w-full text-center">
                     <div className="inline-flex items-center gap-3 px-6 py-3 bg-accent backdrop-blur-sm border border-secondary rounded-full text-sm font-medium mb-8">
                         <Sparkles className="h-5 w-5 text-tertiary" />
@@ -17,7 +18,7 @@ export default function OurRoots() {
                     </div>
                     <div className="text-center">
                         <h2 className="text-4xl md:text-6xl font-bold">Our Roots</h2>
-                        <p className="text-xl text-muted-foreground">
+                        <p className="mt-4 text-xl text-muted-foreground">
                             GSI is a for-profit think tank launched as a startup that goes to the very roots of the problems facing Bangladesh and the world. We shift scholarly and academic content from dusty journals to the pulse of social media — delivering pragmatic, actionable insights on governance, security, technology, AI, conflict, and development.
                         </p>
                         <p className="mt-6 text-lg text-accent-foreground max-w-3xl mx-auto">
@@ -31,14 +32,14 @@ export default function OurRoots() {
             <section className="pb-24 px-4 xl:px-64">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
-                        <Card className="p-10 lg:p-14 bg-linear-to-tr from-indigo-900/20 to-transparent border hover:border-primary/30 transition-all duration-500">
+                        <Card className="p-10 lg:p-14 bg-accent border hover:border-primary transition-all duration-500">
                             <h3 className="text-3xl lg:text-4xl font-bold mb-8 text-primary">Vision</h3>
                             <p className="text-lg lg:text-xl leading-relaxed text-muted-foreground">
                                 To radically democratize rigorous scholarship — pulling deep, root-level analysis out of academic silos and injecting it directly into the bloodstream of public discourse, policy-making, and real-time global conversations, making complex knowledge immediate, accessible, and decisively impactful.
                             </p>
                         </Card>
 
-                        <Card className="p-10 lg:p-14 bg-linear-to-tr from-indigo-900/20 to-transparent border hover:border-primary/30 transition-all duration-500">
+                        <Card className="p-10 lg:p-14 bg-accent border hover:border-primary transition-all duration-500">
                             <h3 className="text-3xl lg:text-4xl font-bold mb-8 text-primary">Mission</h3>
                             <p className="text-lg lg:text-xl leading-relaxed text-muted-foreground">
                                 To relentlessly unearth the very roots of Bangladesh’s and the world’s most pressing challenges in governance, security, technology, AI, conflict, and development — then translate that scholarship into sharp, pragmatic, and immediately actionable insights delivered straight to policymakers, diplomats, academics, businesses, governments, and the engaged public through social media, live sessions, reports, podcasts, and training programs.
@@ -49,33 +50,8 @@ export default function OurRoots() {
             </section>
 
             {/* Our Seven Wings */}
-            <section className="py-24 px-4 xl:px-64">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl md:text-6xl font-bold mb-6">Our Seven Wings</h2>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Every insight, live show, report, training program, and consultation is delivered through one of our specialized, interconnected wings.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {[
-                        { icon: Globe, title: "Bangladesh Affairs", color: "text-indigo-400", desc: "Decentralization, political movements, labor rights, economy, governance reform, tea workers, and ground-level fieldwork." },
-                        { icon: Shield, title: "Global Affairs", color: "text-purple-400", desc: "Great-power competition, China in the international system, MENA, South Caucasus, Russia-Ukraine, and emerging global conflicts." },
-                        { icon: BrainCircuit, title: "Technology Wing", color: "text-cyan-400", desc: "AI & disinformation, drone warfare, 3D printing in warzones, digitalization of warfare, cybersecurity." },
-                        { icon: Radio, title: "Media & OSINT Wing", color: "text-pink-400", desc: "Bangladesh's first professional OSINT platform, micro-journals, podcasts, Friday/Saturday lives, Wednesday satire, field interviews." },
-                        { icon: BookOpenText, title: "History & Linguistics Wing", color: "text-amber-400", desc: "Comparative genocide studies, Soviet identities, linguistic policy, historical roots of modern crises." },
-                        { icon: GraduationCap, title: "Training Academy", color: "text-emerald-400", desc: "Intensive courses for diplomats, policymakers, law enforcement, journalists, and students." },
-                        { icon: Lightbulb, title: "Pedagogical Wing", color: "text-orange-400", desc: "Innovative teaching methodologies, curriculum design, and knowledge dissemination strategies for the digital age." },
-                    ].map((wing) => (
-                        <Card key={wing.title} className="p-8 transition-all duration-500 hover:shadow-2xl bg-accent backdrop-blur-md ">
-                            <div className={`p-4 w-fit rounded-2xl bg-background/60 mb-6`}>
-                                <wing.icon className={`h-12 w-12 ${wing.color}`} />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-4">{wing.title}</h3>
-                            <p className="text-muted-foreground leading-relaxed">{wing.desc}</p>
-                        </Card>
-                    ))}
-                </div>
+            <section className="py-24 min-h-screen">
+                <SevenWings />
             </section>
 
             {/* The Minds Behind GSI */}

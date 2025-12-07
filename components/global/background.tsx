@@ -8,7 +8,7 @@ export default function Background() {
         <DotGrid
             dotSize={5}
             gap={15}
-            baseColor={theme === "light" ? "#e5e5e5" : "#271e37"}
+            baseColor={theme === "light" ? "#D1ECFF" : "#271e37"}
             activeColor="#F25912"
             proximity={120}
             shockRadius={250}

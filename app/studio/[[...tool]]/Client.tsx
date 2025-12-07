@@ -22,7 +22,7 @@ export default function SanityClient() {
 
     return (
         <div className="relative">
-            <div className="absolute right-0 bottom-48 bg-white rounded-l-md flex items-center min-h-24 shadow-lg">
+            <div className="absolute right-0 bottom-48 bg-white rounded-l-md flex items-center min-h-24 shadow-lg z-240 text-black">
                 {hideButton ? (
                     <ChevronRight 
                         onClick={() => {setHideButton(!hideButton)}} 
@@ -44,7 +44,7 @@ export default function SanityClient() {
                         }
                     `}
                 >
-                    <p className="text-sm">Welcome, {session?.user?.name}!</p>
+                    <p className="text-sm text-black">Welcome, {session?.user?.name}!</p>
                     <Button 
                         onClick={() => signOut({ callbackUrl: '/login' })}
                         className="text-xs"

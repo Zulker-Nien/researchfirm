@@ -11,7 +11,7 @@ import { ModeToggle } from "./themeToggle"
 export default function Navbar() {
     const [openMobile, setOpenMobile] = useState(false)
     return (
-        <div className="fixed flex items-center justify-between py-4 px-4 xl:px-64 border-b w-full z-50 bg-white dark:bg-slate-950">
+        <div className="top-0 fixed flex items-center justify-between py-4 px-4 xl:px-64 border-b w-full z-200 bg-white dark:bg-slate-950">
             <Button variant={"outline"} className="md:hidden relative" onClick={() => setOpenMobile(!openMobile)}>
                 <span className={`absolute transition-all duration-300 ease-in-out ${openMobile ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}>
                     <Menu />
@@ -21,7 +21,9 @@ export default function Navbar() {
                 </span>
             </Button>
             <Link href="/">
-                <Image src="/logo.png" alt="Logo" width={50} height={50} />
+                <div className="overflow-hidden flex items-center justify-center h-16 dark:bg-white rounded-md">
+                    <Image src="/logo.png" alt="Logo" width={100} height={100} />
+                </div>
             </Link>
             <NavigationMenu viewport={openMobile} className={`gap-2 ${openMobile ? 'flex flex-col absolute top-full left-0 right-0 bg-background border-b md:hidden' : 'hidden md:flex md:relative'}`}>
                 <NavigationMenuList className="flex flex-col md:flex-row w-screen md:w-full">
@@ -80,7 +82,7 @@ export default function Navbar() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                 </NavigationMenuList>
-                <ModeToggle />
+                <ModeToggle/>
             </NavigationMenu>
 
         </div>
